@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Para a minha Namorada ❤️</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header id="capa">
+      <div class="hero-text">
+        <h1>Para a minha Namorada ❤️</h1>
+        <p>Meu amor, minha parceira e a minha melhor escolha todos os dias.</p>
+
+        <div class="contador-container">
+          <div class="contador" id="timer-conquista">
+            Calculando tempo de história...
+          </div>
+          <div class="contador oficial" id="timer-namoro">
+            Calculando tempo de namoro...
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="mensagem">
+        <h2>Feliz Dia dos Namorados! ✨</h2>
+        <p>
+          Duda, hoje o dia é totalmente nosso. Do lado de cá tem alguém que te
+          ama cada dia mais, que planeja o futuro inteiro contigo e que tem o
+          maior orgulho do mundo de te chamar de namorada.
+        </p>
+      </section>
+
+      <section class="carta-digital">
+        <div class="envelope">
+          <h2>Minha Princesa,</h2>
+          <p>
+            Hoje eu só quero te lembrar o quanto você é essencial na minha vida.
+            O tempo vai passando e a única certeza que eu tenho é que escolher
+            você todos os dias é a melhor decisão que eu já tomei.
+          </p>
+          <p>
+            Eu sei que às vezes sou meio difícil, meio cabeça dura, mas com você
+            eu aprendo diariamente a ser alguém melhor. Você trouxe cor, paz e
+            um sentido completamente novo para os meus dias. Cada sorriso seu,
+            cada momento simples do nosso lado, vale mais do que qualquer outra
+            coisa.
+          </p>
+          <p>
+            Sei que as coisas saem do planejado às vezes, que o estresse e a
+            correria do dia a dia tentam pesar, mas o meu compromisso é com
+            você, e não com o calendário. Não me importa se não estamos no
+            cinema ou em um restaurante hoje; o meu lugar favorito no mundo
+            continua sendo qualquer lugar onde você esteja bem, segura e calma.
+          </p>
+          <p>
+            <strong>Eu amo você, minha namorada linda!</strong> Obrigado por ser
+            meu refúgio e minha parceira de vida. Conta comigo para segurar a
+            sua barra sempre, segurar o seu choro e te fazer sorrir logo depois.
+            ❤️
+          </p>
+
+          <div class="vale-container">
+            <div class="vale-card">
+              <h3>🎟️ VALE-DATE EXCLUSIVO</h3>
+              <p>
+                Válido para: Nosso rolê oficial de Namorados (Cinema VIP com
+                pipoca grande OU aquela cafeteria top que você escolher).
+              </p>
+              <small
+                >*Sem data de validade. Use assim que quiser fugir do estresse
+                do mundo.*</small
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="galeria">
+        <div class="foto-card">
+          <img src="imagens/1.jpg" alt="Momento nosso" />
+          <p class="legenda">Amo cada detalhe seu ✨</p>
+        </div>
+
+        <div class="foto-card">
+          <img src="imagens/2.jpg" alt="Momento nosso" />
+          <p class="legenda">O seu sorriso continua sendo o meu favorito 😍</p>
+        </div>
+
+        <div class="foto-card">
+          <img src="imagens/3.jpg" alt="Momento nosso" />
+          <p class="legenda">Sempre maravilhosa, em qualquer momento ❤️</p>
+        </div>
+
+        <div class="foto-card">
+          <img src="imagens/4.jpg" alt="Momento nosso" />
+          <p class="legenda">Com você, o futuro fica muito mais bonito</p>
+        </div>
+
+        <div class="foto-card">
+          <img src="imagens/5.jpg" alt="Momento nosso" />
+          <p class="legenda">Minha parceira para todas as horas 💖</p>
+        </div>
+
+        <div class="foto-card">
+          <img src="imagens/6.jpg" alt="Momento nosso" />
+          <p class="legenda">Cada segundo do seu lado vale ouro 💎</p>
+        </div>
+
+        <div class="foto-card">
+          <img src="imagens/7.jpg" alt="Momento nosso" />
+          <p class="legenda">
+            A dona do meu coração e dos meus melhores sorrisos
+          </p>
+        </div>
+
+        <div class="foto-card">
+          <img src="imagens/8.jpg" alt="Momento nosso" />
+          <p class="legenda">Por mais e mais momentos assim coladinhos 💕</p>
+        </div>
+
+        <div class="foto-card">
+          <img src="imagens/9.jpg" alt="Momento nosso" />
+          <p class="legenda">A melhor escolha que eu faço todos os dias 🌹</p>
+        </div>
+
+        <div class="foto-card">
+          <img src="imagens/10.jpg" alt="Momento nosso" />
+          <p class="legenda">Nossa história está só começando... Te amo! 💍</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>Feito com ❤️ por João</footer>
+
+    <script>
+      // Datas Históricas (Meses no JavaScript começam em 0: Julho=6, Maio=4)
+      const dataConquista = new Date(2025, 6, 14);
+      const dataNamoro = new Date(2026, 4, 3);
+
+      function calcularDiferenca(data) {
+        const agora = new Date();
+        const diferenca = agora - data;
+
+        const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
+        const horas = Math.floor((diferenca / (1000 * 60 * 60)) % 24);
+        const minutos = Math.floor((diferenca / 1000 / 60) % 60);
+        const segundos = Math.floor((diferenca / 1000) % 60);
+
+        return `${dias} dias, ${horas}h ${minutos}m ${segundos}s`;
+      }
+
+      function atualizarContadores() {
+        document.getElementById(
+          "timer-conquista"
+        ).innerHTML = `Conquistando seu coração há:<br><strong>${calcularDiferenca(
+          dataConquista
+        )}</strong>`;
+
+        document.getElementById(
+          "timer-namoro"
+        ).innerHTML = `💍 Namorando oficialmente há:<br><strong>${calcularDiferenca(
+          dataNamoro
+        )}</strong>`;
+      }
+
+      setInterval(atualizarContadores, 1000);
+      atualizarContadores();
+    </script>
+  </body>
+</html>
