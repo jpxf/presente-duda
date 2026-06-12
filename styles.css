@@ -18,7 +18,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow-x: hidden; /* Trava o scroll lateral */
+  overflow-x: hidden;
   width: 100%;
 }
 
@@ -27,10 +27,9 @@ header {
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; /* Centralização vertical perfeita para Desktop */
   text-align: center;
-  /* Configurado para a imagem local que você salvar na pasta */
-  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+  background: linear-gradient(rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.42)),
     url("imagens/capa.jpg");
   background-size: cover;
   background-position: center;
@@ -38,18 +37,24 @@ header {
 }
 
 .hero-text {
-  background: rgba(255, 255, 255, 0.88);
-  padding: 25px 20px;
+  background: rgba(
+    255,
+    255,
+    255,
+    0.92
+  ); /* Um pouco mais opaco para melhor leitura */
+  padding: 30px 20px;
   border-radius: 25px;
   box-shadow: 0 10px 30px rgba(255, 77, 109, 0.2);
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(8px);
   width: 90%;
-  max-width: 480px;
+  max-width: 440px; /* Mantém o bloco estruturado e elegante no computador */
+  margin: 0 auto;
 }
 
 h1 {
   color: var(--cor-primaria);
-  font-size: calc(1.5rem + 1vw);
+  font-size: calc(1.4rem + 1vw);
   margin-bottom: 8px;
 }
 
@@ -58,7 +63,7 @@ h1 {
   margin-bottom: 15px;
 }
 
-/* --- CONTADORES (Escopo Global Corrigido) --- */
+/* --- CONTADORES --- */
 .contador-container {
   display: flex;
   flex-direction: column;
@@ -82,13 +87,33 @@ h1 {
 }
 
 .contador.oficial {
-  background: #d90429; /* Destaque para o namoro oficial */
+  background: #d90429;
   transform: scale(1.03);
   box-shadow: 0 4px 15px rgba(217, 4, 41, 0.3);
 }
 
+/* --- AVATAR ESTILO WHATSAPP --- */
+.avatar-container {
+  display: flex;
+  justify-content: center;
+  margin-top: -60px; /* Intercala perfeitamente com a capa */
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+}
+
+.avatar-whatsapp {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%; /* Recorte idêntico ao do WhatsApp */
+  object-fit: cover;
+  border: 4px solid white;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+}
+
 .mensagem {
-  padding: 40px 20px 10px 20px;
+  padding: 30px 20px 10px 20px;
   text-align: center;
   max-width: 600px;
 }
@@ -206,15 +231,15 @@ footer {
 @media (max-width: 600px) {
   .hero-text {
     width: 92%;
-    padding: 15px 12px;
+    padding: 18px 12px;
   }
 
   h1 {
-    font-size: 1.4rem;
+    font-size: 1.35rem;
   }
 
   .contador {
-    font-size: 0.78rem; /* Letra menor para não quebrar linha no visor do celular */
+    font-size: 0.78rem;
     padding: 10px 8px;
   }
 
@@ -224,7 +249,7 @@ footer {
   }
 
   .galeria {
-    grid-template-columns: 1fr; /* Uma foto por linha no smartphone */
+    grid-template-columns: 1fr;
     padding: 10px;
   }
 
@@ -235,21 +260,4 @@ footer {
   .vale-card p {
     font-size: 0.88rem;
   }
-  .avatar-container {
-  display: flex;
-  justify-content: center;
-  margin-top: -50px; /* Faz a foto flutuar cortando a divisão das seções */
-  margin-bottom: 20px;
-  position: relative;
-  z-index: 10;
-}
-
-.avatar-whatsapp {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%; /* Esse é o segredo que deixa redondinho igual ao WhatsApp */
-  object-fit: cover;
-  border: 4px solid white;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-}
 }
