@@ -18,7 +18,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow-x: hidden;
+  overflow-x: hidden; /* Trava o scroll lateral */
   width: 100%;
 }
 
@@ -27,7 +27,7 @@ header {
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center; /* Centralização vertical perfeita para Desktop */
+  align-items: center; /* Centralização vertical perfeita no Desktop */
   text-align: center;
   background: linear-gradient(rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.42)),
     url("imagens/capa.jpg");
@@ -37,18 +37,13 @@ header {
 }
 
 .hero-text {
-  background: rgba(
-    255,
-    255,
-    255,
-    0.92
-  ); /* Um pouco mais opaco para melhor leitura */
+  background: rgba(255, 255, 255, 0.92); /* Um pouco mais opaco para leitura perfeita */
   padding: 30px 20px;
   border-radius: 25px;
   box-shadow: 0 10px 30px rgba(255, 77, 109, 0.2);
   backdrop-filter: blur(8px);
   width: 90%;
-  max-width: 440px; /* Mantém o bloco estruturado e elegante no computador */
+  max-width: 440px; /* Segura o tamanho ideal no monitor */
   margin: 0 auto;
 }
 
@@ -87,20 +82,21 @@ h1 {
 }
 
 .contador.oficial {
-  background: #d90429;
+  background: #d90429; /* Destaque para o namoro oficial */
   transform: scale(1.03);
   box-shadow: 0 4px 15px rgba(217, 4, 41, 0.3);
 }
 
-/* --- AVATAR ESTILO WHATSAPP --- */
+/* --- AVATAR ESTILO WHATSAPP (CORRIGIDO) --- */
 .avatar-container {
   display: flex;
   justify-content: center;
-  margin-top: -60px; /* Intercala perfeitamente com a capa */
-  margin-bottom: 10px;
+  align-items: center;
+  width: 100%;
+  margin-top: -60px; /* Entrecala perfeitamente flutuando sobre a capa */
+  margin-bottom: 20px;
   position: relative;
   z-index: 10;
-  width: 100%;
 }
 
 .avatar-whatsapp {
@@ -243,13 +239,19 @@ footer {
     padding: 10px 8px;
   }
 
+  .avatar-container {
+    margin-top: -60px; /* Trava o alinhamento flutuante no celular */
+    margin-bottom: 10px;
+    justify-content: center; /* Força o centro absoluto no mobile */
+  }
+
   .envelope {
     padding: 20px 15px;
     font-size: 0.95rem;
   }
 
   .galeria {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Uma foto por linha no smartphone */
     padding: 10px;
   }
 
